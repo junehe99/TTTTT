@@ -16,7 +16,7 @@ public class playerController : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		float move = Input.GetAxis("Horizontal");
-		theAnimator.SetFloat("speed", move);
+		theAnimator.SetFloat("speed", Mathf.Abs(move));
 		myRB.velocity = new Vector2(move*maxSpeed, myRB.velocity.y);
 		
 	}
