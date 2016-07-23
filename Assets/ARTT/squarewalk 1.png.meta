@@ -58,8 +58,8 @@ TextureImporter:
         y: 542
         width: 533
         height: 541
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .5, y: .310145795}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: squarewalk_1
       rect:
