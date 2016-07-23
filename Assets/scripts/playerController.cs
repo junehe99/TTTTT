@@ -6,6 +6,8 @@ public class playerController : MonoBehaviour {
 	public float maxSpeed;
 	Rigidbody2D myRB;
 	Animator theAnimator;
+	public AudioClip flipSound;
+	public float flipSoundVolume;
 	
 	void OnTriggerEnter2D (Collider2D collider) {
 		Destroy(gameObject);
@@ -35,6 +37,7 @@ public class playerController : MonoBehaviour {
 			Vector3 scale = transform.localScale;
 			scale.y *= -1;
 			transform.localScale = scale;
+			AudioSource.PlayClipAtPoint(flipSound, transform.position, flipSoundVolume);
 		}
 	}
 }
