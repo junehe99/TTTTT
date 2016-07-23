@@ -30,6 +30,9 @@ public class playerController : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.Space)) {
 			Debug.Log("got key down");
 			myRB.gravityScale = -myRB.gravityScale;
+			Vector3 scale = transform.localScale;
+			scale.y *= -1;
+			transform.localScale = scale;
 		}
 	}
 }
