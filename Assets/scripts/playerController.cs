@@ -27,7 +27,9 @@ public class playerController : MonoBehaviour {
 	}
 
 	void Update ()  {
-		if (Input.GetKeyDown (KeyCode.Space)) {
+		if (Input.GetKeyDown (KeyCode.Space)
+		    || Input.GetKeyDown(KeyCode.JoystickButton0)
+		    || Input.GetKeyDown(KeyCode.JoystickButton16)) {
 			Debug.Log("got key down");
 			myRB.gravityScale = -myRB.gravityScale;
 			Vector3 scale = transform.localScale;
