@@ -24,7 +24,12 @@ public class playerController : MonoBehaviour {
 		float move = Input.GetAxis("Horizontal");
 		theAnimator.SetFloat("speed", Mathf.Abs(move));
 		myRB.velocity = new Vector2(move*maxSpeed, myRB.velocity.y);
-		
 	}
-	
+
+	void Update ()  {
+		if (Input.GetKeyDown (KeyCode.Space)) {
+			Debug.Log("got key down");
+			myRB.gravityScale = -myRB.gravityScale;
+		}
+	}
 }
