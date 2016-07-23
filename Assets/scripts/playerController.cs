@@ -6,11 +6,11 @@ public class playerController : MonoBehaviour {
 	public float maxSpeed;
 	Rigidbody2D myRB;
 	Animator theAnimator;
-	private LevelManager levelmanager;
 	
 	void OnTriggerEnter2D (Collider2D collider) {
 		Destroy(gameObject);
-		levelmanager.LoadNextLevel();
+		LevelManager levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
+		levelManager.LoadLevel("03fail");
 	}
 
 	// Use this for initialization
